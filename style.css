@@ -1,54 +1,239 @@
 
 body {
-	background-color: black;
+    font-family: 'Noto Sans HK', sans-serif;
+    margin: 0;
 }
 
-div#board {
-	position: relative;
-	width: 1024px;
-	height: 863px;
-	margin: auto;
-	background: url("board.jpg") no-repeat;
+h1 {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 25px;
+    bottom: 25px;
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 35px;
+    font-weight: bold;
 }
 
-div#messageArea {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	color: rgb(83, 175, 19);
+p {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 25px;
+    bottom: 25px;
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: lighter;
 }
 
-table {
-	position: absolute;
-	left: 173px;
-	top: 98px;
-	border-spacing: 0px;
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
 }
 
-td {
-	width: 94px;
-	height: 94px;
+.navigation li {
+
+    font-weight: 100;
+    letter-spacing: 2px;
+    padding: 20px;
+    display: inline;
 }
 
-form {
-	position: absolute;
-	bottom: 0px;
-	right: 0px;
-	padding: 15px;
-	background-color: rgb(83, 175, 19);
+li a:link {
+    color: #e680e4;
+    font-weight: 100;
+    letter-spacing: 2px;
+    padding: 5px;
+    display: inline;
+    text-decoration: none;
+    transition: 0.3s;
+
 }
 
-form input {
-	background-color: rgb(152, 207, 113);
-	border-color: rgb(83, 175, 19);
-	font-size: 1em;
+li a:hover, a:active {
+    background-color: rgba(32, 255, 185, 0.7);
+    padding: 15px;
 }
 
-.hit {
-	background: url("ship.png") no-repeat center center;
+#banner {
+    background-image: url("web_image1.jpg");
+    background-size: cover;
+    background-position: bottom center;
+    height: 400px;
+    width: 100%;
 }
 
-.miss {
-	background: url("miss.png") no-repeat center center;
+#banner .intro h1 {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 50px;
+    width: 100%;
+    margin: 0 auto;
 }
+
+#banner .intro p {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 50px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content h1 {
+    text-align: center;
+}
+
+a.button4{
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border:0.16em solid;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Calibri',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+}
+a.button4:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: #20ffb9;
+}
+
+a.button5{
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border:0.16em solid;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Calibri',sans-serif;
+    font-weight:400;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+    font-size: 16px;
+}
+
+a.button5:hover {
+    padding:0.5em 1.4em;
+}
+
+@media all and (max-width:30em){
+     a.button4 and a.button5 {
+        display: block;
+        margin: 0.2em auto;
+    }
+}
+
+#education {
+    background-color: #9fd8cc;
+    height: 400px;
+    width: 100%;
+    text-align: center;
+
+}
+
+#education .content p {
+    width: 90%;
+    text-align: left;
+    justify-content: space-between;
+}
+
+#projects {
+    background-color: #dba1cb;
+    height: 400px;
+    width: 100%;
+}
+#contact {
+    background-color: #dba1cb;
+    max-height: 400px;
+    width: 100%;
+}
+
+/* Contact form */
+
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: Calibri, sans-serif;
+}
+
+
+input[type=submit] {
+    text-align: center;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto;
+    width: 40%;
+    background-color: #20ffb9;
+    border: none;
+}
+
+input[type=submit]:hover:active {
+    background-color: #20ffb9;
+    padding: 12px 20px;
+
+}
+
+.container {
+    border-radius: 5px;
+    padding: 20px;
+    object-fit: contain;
+}
+
+.col-75 {
+    margin: auto;
+    width: 60%;
+}
+
+.submit-button {
+    text-align: center;
+    margin: 0 auto;
+    width: 40%;
+    border: none;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+#footer {
+    background-size: cover;
+    background-position: center;
+    height: 130px;
+    width: 100%;
+    background-color: #9fd8cc;
 }

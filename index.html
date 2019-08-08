@@ -1,43 +1,130 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<meta charset="utf-8">
-		<title>Battleship</title>
+
+    	<!–– responsive page ––>
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    	<meta charset="UTF-8">
+    	<title>Chanti's Portfolio</title>
+    	<link rel="stylesheet" type="text/css" href="theme.css">
+
+    	<!–– favicon ––>
+    	<link rel="stylesheet" type="text/css" href="style.css">
+    	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    	<link rel="manifest" href="site.webmanifest">
+
+    	<!–– icons ––>
+    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    	<!–– Google fonts ––>
+    	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap" rel="stylesheet">
 	</head>
-
 	<body>
-		<div id="board">
-			<div id="messageArea"></div>
-			<table>
-				<tr>
-					<td id="00"></td><td id="01"></td><td id="02"></td><td id="03"></td><td id="04"></td><td id="05"></td><td id="06"></td>
-				</tr>
-				<tr>
-					<td id="10"></td><td id="11"></td><td id="12"></td><td id="13"></td><td id="14"></td><td id="15"></td><td id="16"></td>
-				</tr>
-				<tr>
-					<td id="20"></td><td id="21"></td><td id="22"></td><td id="23"></td><td id="24"></td><td id="25"></td><td id="26"></td>
-				</tr>
-				<tr>
-					<td id="30"></td><td id="31"></td><td id="32"></td><td id="33"></td><td id="34"></td><td id="35"></td><td id="36"></td>
-				</tr>
-				<tr>
-					<td id="40"></td><td id="41"></td><td id="42"></td><td id="43"></td><td id="44"></td><td id="45"></td><td id="46"></td>
-				</tr>
-				<tr>
-					<td id="50"></td><td id="51"></td><td id="52"></td><td id="53"></td><td id="54"></td><td id="55"></td><td id="56"></td>
-				</tr>
-				<tr>
-					<td id="60"></td><td id="61"></td><td id="62"></td><td id="63"></td><td id="64"></td><td id="65"></td><td id="66"></td>
-				</tr>
-			</table>
-			<form>
-				<input type="text" id="guessInput" placeholder="A0">
-				<input type="button" id="fireButton" value="Fire!">
-			</form>
-		</div>
-		<script src="battleship.js"></script>
-	</body>
-</html>
 
+	<nav class="navigation">
+    	<ul>
+        	<li><a href="#projects">Projects</a></li>
+        	<li><a href="#education">Education</a></li>
+        	<li><a href="#contact">Contact</a></li>
+    	</ul>
+	</nav>
+
+	<!–– intro ––>
+	<section id = "home">
+    	<div id="banner" >
+        	<div class="intro">
+            	<h1> Hi, I'm Chanti</h1><br>
+            	<p> Software Engineer & MSc Computer Science student
+            	</p>
+            <p><a href="Chanti_Lee_CV.pdf" class="button5" style="background-color:#20ffb9;border: #20ffb9">Download CV</a></p>
+        	</div>
+    	</div>
+	</section>
+
+	<!–– projects ––>
+	<section id="projects">
+    	<div class="content">
+        	<h1>Projects</h1><br>
+        	<p> <img src="placeholder.jpeg" alt="Coming Soon" style="width: 100%; height: 100%; padding:10px"></p>
+    	</div>
+	</section>
+
+	<!–– education ––>
+	<section id="education">
+        <div class="content">
+            <h1>Education</h1><br>
+            <p style="font-weight: 700; font-size: 22px">Birkbeck, University of London
+                <a href="http://www.bbk.ac.uk/study/2019/postgraduate/programmes/TMSCOSCI_C">
+                    <img src = "birkbeck.jpg" alt="Birkbeck logo" style="padding: 5px; float: right; height: 25%; width: 25%">
+                </a></p>
+            <p style ="font-weight: 500; font-size: 20px">MSc Computer Science</p>
+            <p style ="font-weight: 300; font-size: 14px">October 2018 -- present</p>
+            <p style ="font-weight: 200; font-size: 14px">Current/expected grade: Distinction</p>
+            <p style ="font-weight: 200; font-size: 14px">Modules include:</p>
+            <p style="font-weight: 100; font-size: 13px">Principles of Programming I &bull;
+                Principles of Programming II &bull;
+                Information Systems &bull;
+                Data and Knowledge Management &bull;
+                Fundamentals of Computing &bull;
+                Computer Systems &bull;
+                Software Design and Programming &bull;
+                Internet and Web Technologies</p>
+        </div>
+	</section>
+
+	<!–– contact ––>
+	<section id="contact">
+        <div class="content">
+            <h1>Contact Me</h1><br>
+            <!–– contact form ––>
+            <form action="https://formspree.io/chantellellee@gmail.com" method="POST">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-75">
+                            <input type="text" id="name" name="name" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-75">
+                            <input type="text" id="email" name="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-75">
+                            <textarea id="text" name="subject" placeholder="Your message" style="height:120px"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="submit-button">
+                        <input type="submit" name="submit" value="Send"></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+</section>
+
+<section id="footer">
+    
+    <div class = "icons">
+        <p class ="text-center">
+            <a href="https://www.github.com/chanti-lee"><i class='fab fa-github' style='font-size:48px;color:white;vertical-align: middle;padding: 2px;'></i></a>
+            <a href="https://www.linkedin.com/in/chantellelouiselee"><i class='fab fa-linkedin' style='font-size:48px;color:white;vertical-align: middle;padding: 2px;'></i></a>
+            <a href="https://www.upwork.com/o/profiles/users/_~013429c3f79f839b76/"><img src="upwork.png" alt="upwork-icon" height="50px" width="50px" style="vertical-align: middle;padding: 2px;"></a>
+        </p>
+        <p>Developed by Chanti &copy; 2019</p>
+
+    </div>
+
+</section>
+
+	<!–– JavaScript ––>
+	<script src="myScript.js"></script>
+
+	</body>
+
+
+</html>
