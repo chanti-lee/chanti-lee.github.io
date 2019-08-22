@@ -1,239 +1,143 @@
 
 body {
-    font-family: 'Noto Sans HK', sans-serif;
-    margin: 0;
+  color: #404040;
+  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1 {
-    position: relative;
-    color: white;
-    text-align: center;
-    top: 25px;
-    bottom: 25px;
-    max-width: 400px;
-    margin: 0 auto;
-    font-size: 35px;
-    font-weight: bold;
+#openbtn {
+  margin-top: 50px;
+  padding-top: 20px;
+  font-size: 50px;
 }
 
-p {
-    position: relative;
-    color: white;
-    text-align: center;
-    top: 25px;
-    bottom: 25px;
-    max-width: 400px;
-    margin: 0 auto;
-    font-size: 15px;
-    font-weight: lighter;
+a {
+  color: #404040;
+  text-decoration: none;
 }
 
-
-.navigation ul {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-
+a:hover {
+  color: #101010;
 }
 
-.navigation li {
-
-    font-weight: 100;
-    letter-spacing: 2px;
-    padding: 20px;
-    display: inline;
+.sidebar {
+  position: fixed;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  transition: 0.5s;
+  background-color: white;
 }
 
-li a:link {
-    color: #e680e4;
-    font-weight: 100;
-    letter-spacing: 2px;
-    padding: 5px;
-    display: inline;
-    text-decoration: none;
-    transition: 0.3s;
-
+.sidebar a {
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
 }
 
-li a:hover, a:active {
-    background-color: rgba(32, 255, 185, 0.7);
-    padding: 15px;
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  font-size: 36px;
 }
 
-#banner {
-    background-image: url("web_image1.jpg");
-    background-size: cover;
-    background-position: bottom center;
-    height: 400px;
-    width: 100%;
+.map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  
 }
 
-#banner .intro h1 {
-    position: relative;
-    color: white;
-    text-align: center;
-    top: 50px;
-    width: 100%;
-    margin: 0 auto;
+.search {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  height: 60px;
+  line-height: 60px;
+  padding: 10px;
 }
 
-#banner .intro p {
-    position: relative;
-    color: white;
-    text-align: center;
-    top: 50px;
-    width: 100%;
-    margin: 0 auto;
+.listings {
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 30px;
 }
 
-.content h1 {
-    text-align: center;
+.listings .item {
+  display: block;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  text-decoration: none;
 }
 
-a.button4{
-    display:inline-block;
-    padding:0.3em 1.2em;
-    margin:0 0.1em 0.1em 0;
-    border:0.16em solid;
-    border-radius:2em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Calibri',sans-serif;
-    font-weight:300;
-    color:#FFFFFF;
-    text-align:center;
-    transition: all 0.2s;
-}
-a.button4:hover{
-    background-color: rgba(255, 255, 255, 0.3);
-    border-color: #20ffb9;
+.listings .item:last-child { border-bottom: none; }
+
+.listings .item .title {
+  display: block;
+  font-weight: 700;
 }
 
-a.button5{
-    display:inline-block;
-    padding:0.3em 1.2em;
-    margin:0 0.1em 0.1em 0;
-    border:0.16em solid;
-    border-radius:2em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Calibri',sans-serif;
-    font-weight:400;
-    color:#FFFFFF;
-    text-align:center;
-    transition: all 0.2s;
-    font-size: 16px;
+.listings .item .description {
+  font-weight: 500;
 }
 
-a.button5:hover {
-    padding:0.5em 1.4em;
+.listings .item .title small { font-weight: 400; }
+
+.listings .item.active .title,
+.listings .item .title:hover { color: #8cc63f; }
+
+.listings .item.active {
+  background-color: #f8f8f8;
 }
 
-@media all and (max-width:30em){
-     a.button4 and a.button5 {
-        display: block;
-        margin: 0.2em auto;
-    }
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-left: 0;
+  background: rgba(0, 0, 0, 0.1);
 }
 
-#education {
-    background-color: #9fd8cc;
-    height: 400px;
-    width: 100%;
-    text-align: center;
-
+::-webkit-scrollbar-track {
+  background: none;
 }
 
-#education .content p {
-    width: 90%;
-    text-align: left;
-    justify-content: space-between;
-}
-
-#projects {
-    background-color: #dba1cb;
-    height: 400px;
-    width: 100%;
-}
-#contact {
-    background-color: #dba1cb;
-    max-height: 400px;
-    width: 100%;
-}
-
-/* Contact form */
-
-* {
-    box-sizing: border-box;
-}
-
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 4px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-    font-family: Calibri, sans-serif;
+::-webkit-scrollbar-thumb {
+  background: #00853e;
+  border-radius: 0;
 }
 
 
-input[type=submit] {
-    text-align: center;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 0 auto;
-    width: 40%;
-    background-color: #20ffb9;
-    border: none;
+.hide {
+  display: none;
 }
 
-input[type=submit]:hover:active {
-    background-color: #20ffb9;
-    padding: 12px 20px;
-
+.marker {
+  background-image: url('star-15.svg');
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.container {
-    border-radius: 5px;
-    padding: 20px;
-    object-fit: contain;
+
+@media only screen and (max-width: 420px) {
+  .description {
+    display: none;
+    font-size: 12px;
+  }
+
+    #searchQuery {
+  margin: 5px;
+  width: 80px;
 }
 
-.col-75 {
-    margin: auto;
-    width: 60%;
-}
-
-.submit-button {
-    text-align: center;
-    margin: 0 auto;
-    width: 40%;
-    border: none;
-
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-    }
-}
-
-#footer {
-    background-size: cover;
-    background-position: center;
-    height: 130px;
-    width: 100%;
-    background-color: #9fd8cc;
 }
