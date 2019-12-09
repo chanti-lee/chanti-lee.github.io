@@ -1,16 +1,20 @@
 
-body {
+* {
   color: #404040;
-  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
 }
 
 #openbtn {
-  margin-top: 50px;
-  padding-top: 20px;
-  font-size: 50px;
+   margin-top: 5px;
+   padding-top: 5px;
+   font-size: 50px;
+ }
+
+#openbtn:hover {
+  cursor: pointer;
 }
 
 a {
@@ -28,10 +32,10 @@ a:hover {
   height: 100%;
   top: 0;
   left: 0;
-  overflow: scroll;
+  overflow: auto;
   border-right: 1px solid rgba(0, 0, 0, 0.25);
   z-index: 1;
-  transition: 0.5s;
+  transition: 0.3s;
   background-color: white;
 }
 
@@ -41,10 +45,15 @@ a:hover {
   transition: 0.3s;
 }
 
-.sidebar .closebtn {
+.closebtn {
   position: absolute;
   top: 0;
+  margin-left: 5px;
   font-size: 36px;
+}
+
+.closebtn:hover {
+  color: red;
 }
 
 .map {
@@ -54,7 +63,7 @@ a:hover {
   top: 0;
   bottom: 0;
   z-index: -1;
-  
+
 }
 
 .search {
@@ -65,9 +74,19 @@ a:hover {
   padding: 10px;
 }
 
+#searchQuery {
+   margin-left: 30px;
+   width: 200px;
+  border-radius: 5px;
+  outline: none;
+  padding:2px 5px;
+}
+#searchQuery:focus{
+  border-color: #00853e;
+}
+
 .listings {
   height: 100%;
-  overflow: auto;
   padding-bottom: 30px;
 }
 
@@ -78,21 +97,26 @@ a:hover {
   text-decoration: none;
 }
 
-.listings .item:last-child { border-bottom: none; }
+.listings .item:last-child {
+  border-bottom: none;
+}
 
 .listings .item .title {
   display: block;
+  font-size: 18px;
   font-weight: 700;
 }
 
 .listings .item .description {
+  font-size: 14px;
   font-weight: 500;
 }
 
 .listings .item .title small { font-weight: 400; }
 
 .listings .item.active .title,
-.listings .item .title:hover { color: #8cc63f; }
+.listings .item .title:hover {
+    color: #1c9e5a; }
 
 .listings .item.active {
   background-color: #f8f8f8;
@@ -114,7 +138,6 @@ a:hover {
   border-radius: 0;
 }
 
-
 .hide {
   display: none;
 }
@@ -122,8 +145,8 @@ a:hover {
 .marker {
   background-image: url('star-15.svg');
   background-size: cover;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -135,9 +158,9 @@ a:hover {
     font-size: 12px;
   }
 
-    #searchQuery {
-  margin: 5px;
-  width: 80px;
-}
+  #searchQuery {
+    margin: 5px;
+    width: 80px;
+  }
 
 }
