@@ -44,14 +44,14 @@ a:hover {
   transition: 0.3s;
 }
 
-.closebtn {
+#closebtn {
   position: absolute;
   top: 0;
   margin-left: 5px;
   font-size: 36px;
 }
 
-.closebtn:hover {
+#closebtn:hover {
   color: red;
 }
 
@@ -155,13 +155,14 @@ a:hover {
   }
 
   .sidebar {
-    width: 60%;
-    height: 50%;
+    width: 55%;
+    height: 40%;
     z-index: 1;
   }
 
   #searchQuery {
-    width: 140px;
+    margin: 5px;
+    width: 150px;
   }
 
   .map {
@@ -171,51 +172,7 @@ a:hover {
     z-index: -1;
 
   }
-
-  .listings {
-    height: 100%;
-    padding-bottom: 30px;
-  }
-
-  .listings .item {
-    display: block;
-    border-bottom: 1px solid #eee;
-    padding: 10px;
-    text-decoration: none;
-  }
-
-  .listings .item:last-child {
-    border-bottom: none;
-  }
-
-  .listings .item .title {
-    display: block;
-    font-size: 18px;
-    font-weight: 700;
-  }
-
-  .listings .item .description {
-    font-size: 14px;
-    font-weight: 500;
-  }
-
-  .listings .item.active .title,
-  .listings .item .title:hover {
-    color: #1c9e5a; }
-
-  .listings .item.active {
-    background-color: #f8f8f8;
-  }
-
-  ::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
-    border-left: 0;
-    background: rgba(0, 0, 0, 0.1);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: #00853e;
-    border-radius: 0;
+  #closebtn, #openbtn {
+    display: none;
   }
 }
