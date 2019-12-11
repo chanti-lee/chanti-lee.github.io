@@ -4,7 +4,6 @@
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
-  -webkit-font-smoothing: antialiased;
 }
 
 #openbtn {
@@ -112,8 +111,6 @@ a:hover {
   font-weight: 500;
 }
 
-.listings .item .title small { font-weight: 400; }
-
 .listings .item.active .title,
 .listings .item .title:hover {
     color: #1c9e5a; }
@@ -127,10 +124,6 @@ a:hover {
   height: 3px;
   border-left: 0;
   background: rgba(0, 0, 0, 0.1);
-}
-
-::-webkit-scrollbar-track {
-  background: none;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -155,12 +148,27 @@ a:hover {
 @media only screen and (max-width: 420px) {
   .description {
     display: none;
-    font-size: 12px;
+  }
+
+  .title {
+    font-size: 10px;
+  }
+
+  .sidebar {
+    width: 60%;
+    height: 50%;
+    z-index: 1;
   }
 
   #searchQuery {
-    margin: 5px;
-    width: 80px;
+    width: 140px;
   }
 
+  .map {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    z-index: -1;
+
+  }
 }

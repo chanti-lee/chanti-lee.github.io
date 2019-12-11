@@ -1,5 +1,5 @@
 
-// array of attractions
+// attractions JSON data
 
 let attractions = [
     {
