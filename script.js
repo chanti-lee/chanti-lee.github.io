@@ -96,7 +96,7 @@ let map = new mapboxgl.Map({
     // initial position in [lon, lat] format
     center: [-73.958, 40.761],
     // initial zoom
-    zoom: 13
+    zoom: 11.5
 });
 
 map.on('load', function(e) {
