@@ -139,7 +139,6 @@ function buildLocationList() {
         let link = listing.appendChild(document.createElement('a'));
         link.href = "#";
         link.className = "title";
-        link.dataPosition = i;
         link.innerHTML = currentFeature.title;
         let desc = link.appendChild(document.createElement('p'));
         desc.className = "description";
