@@ -106,9 +106,12 @@ map.on('load', function(e) {
 
 function addMarker() {
     for (i = 0; i < attractions.length; i++) {
+        // create a HTML element for attraction
         let m = document.createElement("div");
         m.className = "marker";
         m.id = attractions[i].title + " marker";
+
+        // create a marker for attraction m and add to map
         let marker = new mapboxgl.Marker(m);
         marker.setLngLat(attractions[i].coordinates);
         marker.addTo(map);
